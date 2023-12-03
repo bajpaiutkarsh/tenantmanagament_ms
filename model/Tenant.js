@@ -1,6 +1,7 @@
 class Tenant {
     constructor(id=undefined,
         name=undefined,
+        propertyId = undefined,
         startDate=undefined,
         endDate=undefined,
         startMeterReading=undefined,
@@ -13,6 +14,9 @@ class Tenant {
         }
         if(name){
            this.name=name
+        }
+        if(propertyId){
+            this.propertyId = propertyId;
         }
         if(startDate){
            this.startDate=startDate
@@ -46,6 +50,16 @@ class Tenant {
      setid(newId) {
         this.id = newId;
     }
+     //  getter for endDate
+     getpropertyId() {
+        return this.propertyId;
+    }
+
+    //  setter for endDate
+     setpropertyId(newpropertyId) {
+        this.propertyId = newpropertyId;
+    }
+
 
     //  getter for name
      getname() {
