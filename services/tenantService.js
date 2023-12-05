@@ -12,8 +12,8 @@ class tenantService{
         console.log("Registering Tenant... ");
         const client = new MongoClient(env.URI);
         try{
-            const {id, name,propertyId,startDate,endDate,startMeterReading,endMeterReading,lastBillDate,lastPaidDate,pendingAmount } = req.body
-            var newTenant = new Tenant(id, name,propertyId,startDate,endDate,startMeterReading,endMeterReading,lastBillDate,lastPaidDate,pendingAmount );
+            const {id, name,mobile,propertyId,startDate,endDate,startMeterReading,endMeterReading,lastBillDate,lastPaidDate,pendingAmount } = req.body
+            var newTenant = new Tenant(id, name,mobile, propertyId,startDate,endDate,startMeterReading,endMeterReading,lastBillDate,lastPaidDate,pendingAmount );
             var createTenant = await client.db(env.DB).collection(env.TENANTMANAGEMENT).insertOne(newTenant);
             if(createTenant){
                 console.log("Completed Registartion!!!")

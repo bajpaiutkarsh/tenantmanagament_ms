@@ -1,6 +1,7 @@
 class Tenant {
     constructor(id=undefined,
         name=undefined,
+        mobile=undefined,
         propertyId = undefined,
         startDate=undefined,
         endDate=undefined,
@@ -15,6 +16,9 @@ class Tenant {
         if(name){
            this.name=name
         }
+        if(mobile){
+            this.mobile=mobile
+         }
         if(propertyId){
             this.propertyId = propertyId;
         }
@@ -69,6 +73,16 @@ class Tenant {
     //  setter for name
      setname(newName) {
         this.name = newName;
+    }
+
+     //  getter for mobile
+     getmobile() {
+        return this.mobile;
+    }
+
+    //  setter for mobile
+     setmobile(newmobile) {
+        this.mobile = newmobile;
     }
 
     //  getter for startDate

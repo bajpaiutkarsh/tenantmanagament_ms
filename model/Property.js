@@ -1,37 +1,67 @@
 class Property {
-    constructor(id = undefined, name = undefined, address = undefined) {
+    constructor(id = undefined, name = undefined, address = undefined, chargePerUnit = undefined, lastMeterReading = undefined) {
+      if(id){
       this.id = id;
+      }
+      if(name){
       this.name = name;
+      }
+      if(address){
       this.address = address;
+      }
+      if(chargePerUnit){
+        this.chargePerUnit = chargePerUnit;
+        }
+        if(lastMeterReading){
+          this.lastMeterReading = lastMeterReading;
+          }
     }
   
     // Getter for ID
-    get id() {
+    static getid() {
       return this.id;
     }
   
     // Setter for ID
-    set id(newId) {
+    static setid(newId) {
       this.id = newId;
     }
   
     // Getter for name
-    get name() {
+    static getname() {
       return this.name;
     }
   
     // Setter for name
-    set name(newName) {
+    static setname(newName) {
       this.name = newName;
     }
   
+     // Getter for chargePerUnit
+     static getchargePerUnit() {
+      return this.chargePerUnit;
+    }
+  
+    // Setter for chargePerUnit
+    static setchargePerUnit(newchargePerUnit) {
+      this.chargePerUnit = newchargePerUnit;
+    }
+     // Getter for lastMeterReading
+     static getlastMeterReading() {
+      return this.lastMeterReading;
+    }
+  
+    // Setter for lastMeterReading
+    static setlastMeterReading(newlastMeterReading) {
+      this.lastMeterReading = newlastMeterReading;
+    }
     // Getter for address
-    get address() {
+    static getaddress() {
       return this.address;
     }
   
     // Setter for address
-    set address(newAddress) {
+    static setaddress(newAddress) {
       this.address = newAddress;
     }
   }
